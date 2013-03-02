@@ -35,7 +35,7 @@ header {
 }
 
 .mainContent {
-  font-size: 120%;
+  margin-top: 30px;
   //background-image: url(/images/absurdidad.png)
   //@include outer-container;
 }
@@ -56,6 +56,21 @@ header {
   .view-desc {
     @include shift(1);
     @include span-columns(6);
+
+    .text-desc{
+      text-align: center;
+      top: 200px;
+      position: relative;
+
+      font-family: 'Chicle', cursive;
+      font-size: 250%;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    }
+    .store-signup{
+      text-align: center;
+      top: 500px;
+      position: relative;
+    }
 
   }
 }
