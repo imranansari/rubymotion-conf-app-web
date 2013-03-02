@@ -13,8 +13,6 @@
 
   <script language="javascript">
       $(document).ready(function () {
-          var theScroll;
-          theScroll = new iScroll('wrapper');
 
           $(".action").click(function () {
               console.log(event.target.id);
@@ -42,7 +40,31 @@
       <div class="text-desc">
         Intro
       </div>
-      <div class="store-signup">
+      <div class="store-signup" id="signup">
+
+        <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+          <div class="signup-text">
+            Signup to be notified when the App hits the store.
+          </div>
+          <form action="http://herokuapp.us6.list-manage2.com/subscribe/post?u=bf2c650162&amp;id=0e8517c32f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div class="mc-field-group">
+              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email here..">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <div class="clear">
+              <input type="submit" value="Let me know" name="subscribe" id="mc-embedded-subscribe" class="signup-button"></div>
+            <span class="subtle-text">Your email will never be shared wth anyone else.</span>
+          </form>
+        </div>
+
+        <!--End mc_embed_signup-->
+      </div>
+
+      <div class="store-signup" id="store" style="display: none">
         <img src="/images/apple_store@2x.png">
       </div>
     </div>
@@ -87,7 +109,5 @@
 
 </div>
 
-
-<script type="text/javascript" src="/javascripts/iscroll-lite.js"></script>
 </body>
 </html>​

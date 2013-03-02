@@ -59,7 +59,7 @@ header {
 
     .text-desc{
       text-align: center;
-      top: 200px;
+      top: 100px;
       position: relative;
 
       font-family: 'Chicle', cursive;
@@ -68,7 +68,7 @@ header {
     }
     .store-signup{
       text-align: center;
-      top: 500px;
+      top: 520px;
       position: relative;
     }
 
@@ -116,6 +116,14 @@ header {
     @include span-columns(8);
 
   }
+}
+
+.signup-button {
+  @include button(shiny, #f80f43);
+}
+
+.subtle-text{
+  color: gray;
 }
 
 
