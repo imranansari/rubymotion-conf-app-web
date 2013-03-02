@@ -1,8 +1,7 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
-
-$section-height : 500px;
+$section-height: 500px;
 
 body {
   //background-image: url(/images/brillant_@2X.png)
@@ -41,8 +40,27 @@ header {
   //@include outer-container;
 }
 
+#intro {
+  height: 800px;
+  @include outer-container;
 
-.section-odd{
+/*  .placeholder {
+    @include span-columns(2);
+  }*/
+
+  .view-screenshot {
+    @include shift(2);
+    @include span-columns(3);
+  }
+
+  .view-desc {
+    @include shift(1);
+    @include span-columns(6);
+
+  }
+}
+
+.section-odd {
   //@include span-columns(12);
   //@include row(table);
   border-width: 5px;
@@ -52,9 +70,20 @@ header {
   //background-image: url(/images/paper_fibers_@2X.png)
   background-image: url(/images/brillant.png);
   @include outer-container;
+
+  .view-screenshot {
+    @include span-columns(8);
+    text-align: right;
+  }
+
+  .view-desc {
+    @include span-columns(4);
+
+  }
+
 }
 
-.section-even{
+.section-even {
   //@include span-columns(12);
   //@include row(table);
   border-width: 5px;
@@ -63,15 +92,17 @@ header {
   height: $section-height;
   background-image: url(/images/absurdidad.png);
   @include outer-container;
+
+  .view-screenshot {
+    @include span-columns(4);
+  }
+
+  .view-desc {
+    @include span-columns(8);
+
+  }
 }
 
-.view-screenshot {
-  @include span-columns(4);
-}
 
-.view-desc {
-  @include span-columns(8);
-
-}
 
 
