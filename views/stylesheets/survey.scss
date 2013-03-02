@@ -126,6 +126,17 @@ header {
   color: gray;
 }
 
+#{$all-text-inputs} {
+  //border: 1px solid green;
+  height: 30px;
+  font-size: 120%;
+}
+
+
+#{$all-text-inputs-focus} { // Target the :focus pseudo-class
+  background: white;
+}
+
 
 
 
