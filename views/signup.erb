@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Rubymotion #Inspect 2013</title>
+
+  <link href="sass_css/survey.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Chicle' rel='stylesheet' type='text/css'>
+
+  <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+  <script language="javascript">
+      $(document).ready(function () {
+
+          $(".action").click(function () {
+              console.log(event.target.id);
+              $.post("/action", event.target.id);
+              $("footer").html("Thanks for your feedback!").addClass("response");
+          })
+
+      });
+
+  </script>
+</head>
+
+<body>
+
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+  <div class="signup-text">
+    Signup to be notified when the App hits the store.
+  </div>
+  <form action="http://herokuapp.us6.list-manage2.com/subscribe/post?u=bf2c650162&amp;id=0e8517c32f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate>
+    <div class="mc-field-group">
+      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email here..">
+    </div>
+    <div id="mce-responses" class="clear">
+      <div class="response" id="mce-error-response" style="display:none"></div>
+      <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>
+    <div class="clear">
+      <input type="submit" value="Let me know" name="subscribe" id="mc-embedded-subscribe" class="signup-button"></div>
+    <span class="subtle-text">Your email will never be shared wth anyone else.</span>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+</body>
+</html>​
