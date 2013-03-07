@@ -98,9 +98,29 @@ header {
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
       line-height: 40px;
     }
+
+    .disclaimer{
+      top: 580px;
+      color: #ffffff;
+      position: relative;
+      left: 50px;
+
+
+/*      font-family: 'Chicle'; */
+      font-size: 120%;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+
+    }
+
+    .myprofile{
+      position: relative;
+      top: -18px;
+      left: 330px;
+    }
+
     .store-signup {
       text-align: center;
-      top: 520px;
+      top: 400px;
       position: relative;
       color: #ffffff;
       font-size: 105%;
@@ -132,16 +152,17 @@ header {
 
   .view-screenshot {
     @include span-columns(4);
-    @include shift(2);
+/*    @include shift(2);*/
     text-align: right;
   }
 
   .view-desc {
-    @include span-columns(6);
+    @include span-columns(8);
     @include view-desc-font;
 
     position: relative;
     top: 20px;
+    text-align: right;
 
   }
 
@@ -167,6 +188,7 @@ header {
 
     position: relative;
     top: 20px;
+    text-align: left;
   }
 
 }
