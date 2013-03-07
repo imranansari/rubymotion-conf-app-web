@@ -2,7 +2,18 @@
 @import "neat/neat";
 
 $section-height: 500px;
-$mobile: max-width 480px 4;
+$break-small: 481px;
+$break-large: 1200px;
+
+@mixin view-desc-font {
+  text-align: center;
+  position: relative;
+
+  font-family: 'Chicle';
+  font-size: 250%;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  line-height: 20px;
+}
 
 body {
 
@@ -41,42 +52,53 @@ header {
   //@include outer-container;
 }
 
-.intro-wrapper{
-  background: url(/images/bg.png) no-repeat;
+.intro-wrapper {
+  /*  @media screen and (max-width: $break-small) {
+      background: url(/images/bg.png) no-repeat;
+    }
+
+    @media screen and (min-width: $break-large) {
+      background: url(/images/bg.png) no-repeat center center fixed;
+    }*/
+
+  background: url(/images/bg.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+
 #intro {
   padding-top: 50px;
   height: 800px;
   @include outer-container;
 
-/*  .placeholder {
-    @include span-columns(2);
-  }*/
+  /*  .placeholder {
+      @include span-columns(2);
+    }*/
 
   .view-screenshot {
-    @include shift(2);
-    @include span-columns(3);
+    @include shift(1);
+    @include span-columns(2);
   }
 
   .view-desc {
-    @include shift(1);
+    @include shift(2);
     @include span-columns(6);
 
-    .text-desc{
+    .text-desc {
       text-align: center;
       top: 100px;
       color: #ffffff;
       position: relative;
+      left: 10px;
 
-      font-family: 'Chicle', cursive;
+      font-family: 'Chicle';
       font-size: 300%;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+      line-height: 40px;
     }
-    .store-signup{
+    .store-signup {
       text-align: center;
       top: 520px;
       position: relative;
@@ -87,12 +109,14 @@ header {
   }
 }
 
-.odd-row{
+.odd-row {
   background-image: url(/images/brillant.png);
+
 }
 
-.even-row{
+.even-row {
   background-image: url(/images/absurdidad.png);
+
 }
 
 .section-odd {
@@ -103,16 +127,21 @@ header {
   //background-color: red;
   height: $section-height;
   //background-image: url(/images/paper_fibers_@2X.png)
-/*  background-image: url(/images/brillant.png);*/
+  /*  background-image: url(/images/brillant.png);*/
   @include outer-container;
 
   .view-screenshot {
-    @include span-columns(8);
+    @include span-columns(4);
+    @include shift(2);
     text-align: right;
   }
 
   .view-desc {
-    @include span-columns(4);
+    @include span-columns(6);
+    @include view-desc-font;
+
+    position: relative;
+    top: 20px;
 
   }
 
@@ -134,8 +163,12 @@ header {
 
   .view-desc {
     @include span-columns(8);
+    @include view-desc-font;
 
+    position: relative;
+    top: 20px;
   }
+
 }
 
 .signup-button {
@@ -143,7 +176,7 @@ header {
   font-size: 90%;
 }
 
-.subtle-text{
+.subtle-text {
   color: #ffffff;
 }
 
@@ -153,12 +186,10 @@ header {
   font-size: 110%;
 }
 
-
-#{$all-text-inputs-focus} { // Target the :focus pseudo-class
+#{$all-text-inputs-focus} {
+  // Target the :focus pseudo-class
   background: white;
 }
-
-
 
 /*Ribbon*/
 
@@ -168,9 +199,9 @@ header {
   height: 370px;
   background: white;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
-  -moz-box-shadow:    0px 0px 8px rgba(0,0,0,0.3);
-  box-shadow:         0px 0px 8px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 90;
 }
@@ -188,11 +219,11 @@ header {
   font: bold 15px Sans-Serif;
   color: #333;
   text-align: center;
-  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
   -webkit-transform: rotate(45deg);
-  -moz-transform:    rotate(45deg);
-  -ms-transform:     rotate(45deg);
-  -o-transform:      rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   position: relative;
   padding: 7px 0;
   left: -5px;
@@ -201,27 +232,28 @@ header {
   background-color: #BFDC7A;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45));
   background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45);
-  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45);
-  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45);
-  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image: -moz-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image: -ms-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image: -o-linear-gradient(top, #BFDC7A, #8EBF45);
   color: #6a6340;
-  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
-  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
 .ribbon-green:before, .ribbon-green:after {
   content: "";
-  border-top:   3px solid #6e8900;
-  border-left:  3px solid transparent;
+  border-top: 3px solid #6e8900;
+  border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  position:absolute;
+  position: absolute;
   bottom: -3px;
 }
 
 .ribbon-green:before {
   left: 0;
 }
+
 .ribbon-green:after {
   right: 0;
 }
