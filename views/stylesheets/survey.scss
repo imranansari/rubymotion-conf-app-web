@@ -159,6 +159,7 @@ header {
   .view-desc {
     @include span-columns(8);
     @include view-desc-font;
+    color: #861417;
 
     position: relative;
     top: 20px;
@@ -185,6 +186,7 @@ header {
   .view-desc {
     @include span-columns(8);
     @include view-desc-font;
+    color: #861417;
 
     position: relative;
     top: 20px;
